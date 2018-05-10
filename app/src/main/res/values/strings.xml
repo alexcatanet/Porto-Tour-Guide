@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Porto Tour Guide</string>
+    <string name="tower">Clérigos Tower</string>
+    <string name="clerigos_tower">Clérigos Tower</string>
+    <string name="heart_icon">heart_icon</string>
+    <string name="intro_image">intro_image</string>
+    <string name="welcome">Welcome</string>
+    <string name="to_the_city_of_wine">To The Wine City</string>
+
+    <!--Must see places names -->
+    <string name="serra_do_pillar">Serra do Pillar</string>
+    <string name="livraria_lello">Livraria Lello</string>
+    <string name="crystal_palace_garden">Crystal Palace Gardens</string>
+    <string name="ribeira">Ribeira</string>
+    <string name="foz">Foz</string>
+    <string name="sao_bento">Estação de São Bento </string>
+
+    <!--Food & drinks names -->
+    <string name="adega_nicolau">Adega São Nicolau</string>
+    <string name="cafeina">Cafeína</string>
+    <string name="pedro_lemos">Pedro Lemos</string>
+    <string name="puro">Puro 4050</string>
+    <string name="letraria">Letraria - Craft Beer \nGarden</string>
+    <string name="catraio">Catraio Craft Beer Shop</string>
+    <string name="casa">Casa D\'Oro</string>
+
+    <!--Markets names -->
+    <string name="porto_belo">Porto Belo</string>
+    <string name="clerigos_market">Clérigos market</string>
+    <string name="feeting">The Feeting Room</string>
+    <string name="fashion">Fashion Clinic</string>
+    <string name="wine">Wine Luxury Store</string>
+    <string name="garrafeira">Garrafeira Tio Pepe</string>
+    <string name="castelbel">Castelbel Porto</string>
+
+    <!--Art and museums names -->
+    <string name="fc">Fc Porto</string>
+    <string name="bolsa">Palácio da Bolsa</string>
+    <string name="misrecordia">Museu da Misericórdia \ndo Porto</string>
+    <string name="casa_musica">Casa da Música</string>
+    <string name="fado">O Fado</string>
+    <string name="soares">Museu Nacional Soares \ndos Reis</string>
+    <string name="teatro">Teatro Nacional \nSão João</string>
+
+    <!-- Tab names -->
+    <string name="sight_tab_must_see">Must see</string>
+    <string name="sight_tab_food">Food and Drink</string>
+    <string name="sight_tab_market">Markets</string>
+    <string name="sight_tab_art">Art and Museums</string>
+    <string name="ic_nearby">ic_nearby</string>
+    <string name="ic_two_arrows">ic_two_arrows</string>
+    <string name="grid_world">ic_grid_world</string>
+    <string name="ic_share">ic_share</string>
+
+    <!--Description for must see places -->
+    <string name="clerigos_tower_des">If we had to pick just one, this would be it: the Clérigos Tower
+        is indisputably Porto’s most iconic monument. Built during the first half of the 17th century
+        by Italian Nicolau Nasoni (whose work is also found elsewhere in Porto), the tower is the
+        city’s most important Baroque Era building. Brace yourself and climb the 240-step stairway.
+        You won’t regret it when you reach the top. You can also visit the church, the Our Lady of
+        Lapa Crypt, the Collection of the Clérigos Brotherhood and the Christus religious art collection.</string>
+
+    <!--Supplementary information about place -->
+    <string name="prices">Prices</string>
+    <string name="adult_ticket">Adult ticket</string>
+    <string name="From_20">From $20.00</string>
+    <string name="child_ticket">Child ticket</string>
+    <string name="from_10_00">From $10.00</string>
+    <string name="save_up_to_10_online">Save up to 10% online</string>
+    <string name="buy_tickets">Buy Tickets</string>
+    <string name="get_direction">Get Direction</string>
+
+</resources>

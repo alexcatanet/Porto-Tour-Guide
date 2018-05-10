@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.portotourguide">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="@xml/backup_descriptor">
+        <activity
+            android:name=".IntroPage"
+            android:theme="@style/IntroPage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".must_see_places.ClerigosTower" />
+        <activity android:name=".must_see_places.SerraPillar" />
+        <activity android:name=".must_see_places.LivrariaLello" />
+        <activity android:name=".must_see_places.CrystalPalace" />
+        <activity android:name=".must_see_places.Ribeira" />
+        <activity android:name=".must_see_places.Foz" />
+        <activity android:name=".must_see_places.SaoBento" />
+        <activity android:name=".food_and_drink.AdegaNicolau" />
+        <activity android:name=".food_and_drink.Cafeina" />
+        <activity android:name=".food_and_drink.PedroLemos" />
+        <activity android:name=".food_and_drink.Puro" />
+        <activity android:name=".food_and_drink.Letraria" />
+        <activity android:name=".food_and_drink.Catraio" />
+        <activity android:name=".food_and_drink.CasaOro" />
+        <activity android:name=".markets.PortoBelo" />
+        <activity android:name=".markets.ClerigosMarket" />
+        <activity android:name=".markets.FeetingRoom" />
+        <activity android:name=".markets.FashionClinic" />
+        <activity android:name=".markets.WineLuxury" />
+        <activity android:name=".markets.GarrafeiraTio" />
+        <activity android:name=".markets.CastelBel" />
+        <activity android:name=".art_and_museums.FcPorto" />
+        <activity android:name=".art_and_museums.Bolsa" />
+        <activity android:name=".art_and_museums.Misericordia" />
+        <activity android:name=".art_and_museums.CasaMusica" />
+        <activity android:name=".art_and_museums.Fado" />
+        <activity android:name=".art_and_museums.SoaresReis" />
+        <activity android:name=".art_and_museums.SaoJoao" />
+    </application>
+</manifest>
