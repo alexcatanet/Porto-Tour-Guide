@@ -3,7 +3,9 @@ package com.example.android.portotourguide.markets;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.example.android.portotourguide.R;
@@ -17,6 +19,10 @@ public class CastelBel extends AppCompatActivity {
 
         // Set the content of the activity to use the castelbel_porto.xml layout file
         setContentView(R.layout.castelbel_porto);
+        if (getActionBar() != null) {
+            getActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
 
         TextView textView = findViewById(R.id.tower_clericos_des);
 
@@ -24,5 +30,16 @@ public class CastelBel extends AppCompatActivity {
         Typeface font = Typeface.createFromAsset(getBaseContext().getAssets(),
                 "fonts/CrimsonText-Regular.ttf");
         textView.setTypeface(font);   // Set the style of the font
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            //Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

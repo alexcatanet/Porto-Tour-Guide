@@ -35,13 +35,13 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     @Override
     public android.support.v4.app.Fragment getItem(int position) {
         if (position == 0) {
-            return new MustSee_Fragment();
+            return new MustSeeFragment();
         } else if (position == 1) {
-            return new Food_and_Drink_Fragment();
+            return new FoodAndDrinkFragment();
         } else if (position == 2) {
-            return new Markets_Fragment();
+            return new MarketsFragment();
         } else {
-            return new Art_and_Museums_Fragment();
+            return new ArtAndMuseumsFragment();
         }
     }
 

@@ -4,12 +4,12 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:fullBackupContent="@xml/backup_descriptor">
+        android:theme="@style/AppTheme">
         <activity
             android:name=".IntroPage"
             android:theme="@style/IntroPage">
@@ -18,40 +18,293 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".must_see_places.ClerigosTower" />
-        <activity android:name=".must_see_places.SerraPillar" />
-        <activity android:name=".must_see_places.LivrariaLello" />
-        <activity android:name=".must_see_places.CrystalPalace" />
-        <activity android:name=".must_see_places.Ribeira" />
-        <activity android:name=".must_see_places.Foz" />
-        <activity android:name=".must_see_places.SaoBento" />
-        <activity android:name=".food_and_drink.AdegaNicolau" />
-        <activity android:name=".food_and_drink.Cafeina" />
-        <activity android:name=".food_and_drink.PedroLemos" />
-        <activity android:name=".food_and_drink.Puro" />
-        <activity android:name=".food_and_drink.Letraria" />
-        <activity android:name=".food_and_drink.Catraio" />
-        <activity android:name=".food_and_drink.CasaOro" />
-        <activity android:name=".markets.PortoBelo" />
-        <activity android:name=".markets.ClerigosMarket" />
-        <activity android:name=".markets.FeetingRoom" />
-        <activity android:name=".markets.FashionClinic" />
-        <activity android:name=".markets.WineLuxury" />
-        <activity android:name=".markets.GarrafeiraTio" />
-        <activity android:name=".markets.CastelBel" />
-        <activity android:name=".art_and_museums.FcPorto" />
-        <activity android:name=".art_and_museums.Bolsa" />
-        <activity android:name=".art_and_museums.Misericordia" />
-        <activity android:name=".art_and_museums.CasaMusica" />
-        <activity android:name=".art_and_museums.Fado" />
-        <activity android:name=".art_and_museums.SoaresReis" />
-        <activity android:name=".art_and_museums.SaoJoao" />
+        <activity
+            android:name=".must_see_places.ClerigosTower"
+            android:label="@string/clerigos_tower"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".must_see_places.SerraPillar"
+            android:label="@string/serra_do_pillar"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".must_see_places.LivrariaLello"
+            android:label="@string/livraria_lello"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".must_see_places.CrystalPalace"
+            android:label="@string/crystal_palace_garden"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".must_see_places.Ribeira"
+            android:label="@string/ribeira"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".must_see_places.Foz"
+            android:label="@string/foz"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".must_see_places.SaoBento"
+            android:label="@string/sao_bento"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".food_and_drink.AdegaNicolau"
+            android:label="@string/adega_nicolau"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".food_and_drink.Cafeina"
+            android:label="@string/cafeina"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".food_and_drink.PedroLemos"
+            android:label="@string/pedro_lemos"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".food_and_drink.Puro"
+            android:label="@string/puro"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".food_and_drink.Letraria"
+            android:label="@string/letraria"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".food_and_drink.Catraio"
+            android:label="@string/catraio"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".food_and_drink.CasaOro"
+            android:label="@string/casa"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".markets.PortoBelo"
+            android:label="@string/porto_belo"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".markets.ClerigosMarket"
+            android:label="@string/clerigos_market"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".markets.FeetingRoom"
+            android:label="@string/feeting"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".markets.FashionClinic"
+            android:label="@string/fashion"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".markets.WineLuxury"
+            android:label="@string/wine"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".markets.GarrafeiraTio"
+            android:label="@string/garrafeira"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".markets.CastelBel"
+            android:label="@string/castelbel"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".art_and_museums.FcPorto"
+            android:label="@string/fc"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".art_and_museums.Bolsa"
+            android:label="@string/bolsa"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".art_and_museums.Misericordia"
+            android:label="@string/misrecordia"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".art_and_museums.CasaMusica"
+            android:label="@string/casa_musica"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".art_and_museums.Fado"
+            android:label="@string/fado"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".art_and_museums.SoaresReis"
+            android:label="@string/soares"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
+
+        <activity
+            android:name=".art_and_museums.SaoJoao"
+            android:label="@string/teatro"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.portotourguide.MainActivity" />
     </application>
 </manifest>

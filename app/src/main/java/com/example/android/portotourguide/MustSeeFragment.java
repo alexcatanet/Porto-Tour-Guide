@@ -27,7 +27,7 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MustSee_Fragment extends android.support.v4.app.Fragment {
+public class MustSeeFragment extends android.support.v4.app.Fragment {
 
     //Creating a var of type Intent that it to launch an activity
     Intent mIntent;

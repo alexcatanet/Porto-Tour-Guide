@@ -14,20 +14,20 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.example.android.portotourguide.food_and_drink.AdegaNicolau;
-import com.example.android.portotourguide.food_and_drink.Cafeina;
-import com.example.android.portotourguide.food_and_drink.CasaOro;
-import com.example.android.portotourguide.food_and_drink.Catraio;
-import com.example.android.portotourguide.food_and_drink.Letraria;
-import com.example.android.portotourguide.food_and_drink.PedroLemos;
-import com.example.android.portotourguide.food_and_drink.Puro;
+import com.example.android.portotourguide.art_and_museums.Bolsa;
+import com.example.android.portotourguide.art_and_museums.CasaMusica;
+import com.example.android.portotourguide.art_and_museums.Fado;
+import com.example.android.portotourguide.art_and_museums.FcPorto;
+import com.example.android.portotourguide.art_and_museums.Misericordia;
+import com.example.android.portotourguide.art_and_museums.SaoJoao;
+import com.example.android.portotourguide.art_and_museums.SoaresReis;
 
 import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Food_and_Drink_Fragment extends android.support.v4.app.Fragment {
+public class ArtAndMuseumsFragment extends android.support.v4.app.Fragment {
 
     //Creating a var of type Intent that it to launch an activity
     Intent mIntent;
@@ -45,13 +45,13 @@ public class Food_and_Drink_Fragment extends android.support.v4.app.Fragment {
         View rootView = inflater.inflate(R.layout.list_of_places, container, false);
 
         final ArrayList<Places> places = new ArrayList<>();
-        places.add(new Places(R.string.adega_nicolau, R.drawable.adega, R.drawable.ic_heart));
-        places.add(new Places(R.string.cafeina, R.drawable.cafeina, R.drawable.ic_heart));
-        places.add(new Places(R.string.pedro_lemos, R.drawable.pedro, R.drawable.ic_heart));
-        places.add(new Places(R.string.puro, R.drawable.puro, R.drawable.ic_heart));
-        places.add(new Places(R.string.letraria, R.drawable.letraria, R.drawable.ic_heart));
-        places.add(new Places(R.string.catraio, R.drawable.catrario, R.drawable.ic_heart));
-        places.add(new Places(R.string.casa, R.drawable.doro, R.drawable.ic_heart));
+        places.add(new Places(R.string.fc, R.drawable.fc, R.drawable.ic_heart));
+        places.add(new Places(R.string.bolsa, R.drawable.bosla, R.drawable.ic_heart));
+        places.add(new Places(R.string.misrecordia, R.drawable.misrecordia, R.drawable.ic_heart));
+        places.add(new Places(R.string.casa_musica, R.drawable.casa, R.drawable.ic_heart));
+        places.add(new Places(R.string.fado, R.drawable.fado, R.drawable.ic_heart));
+        places.add(new Places(R.string.soares, R.drawable.soares, R.drawable.ic_heart));
+        places.add(new Places(R.string.teatro, R.drawable.teatro, R.drawable.ic_heart));
 
         // Create an {@link PlaceAdapter}, whose data source is a list of {@link Places}s.
         // The adapter knows how to create list items for each item in the list.
@@ -75,25 +75,25 @@ public class Food_and_Drink_Fragment extends android.support.v4.app.Fragment {
                 // Find the position of all the fragment items and bound them with activity class
                 switch (position) {
                     case 0:
-                        mIntent = new Intent(getActivity(), AdegaNicolau.class);
+                        mIntent = new Intent(getActivity(), FcPorto.class);
                         break;
                     case 1:
-                        mIntent = new Intent(getActivity(), Cafeina.class);
+                        mIntent = new Intent(getActivity(), Bolsa.class);
                         break;
                     case 2:
-                        mIntent = new Intent(getActivity(), PedroLemos.class);
+                        mIntent = new Intent(getActivity(), Misericordia.class);
                         break;
                     case 3:
-                        mIntent = new Intent(getActivity(), Puro.class);
+                        mIntent = new Intent(getActivity(), CasaMusica.class);
                         break;
                     case 4:
-                        mIntent = new Intent(getActivity(), Letraria.class);
+                        mIntent = new Intent(getActivity(), Fado.class);
                         break;
                     case 5:
-                        mIntent = new Intent(getActivity(), Catraio.class);
+                        mIntent = new Intent(getActivity(), SoaresReis.class);
                         break;
                     case 6:
-                        mIntent = new Intent(getActivity(), CasaOro.class);
+                        mIntent = new Intent(getActivity(), SaoJoao.class);
                         break;
                 }
                 startActivity(mIntent);

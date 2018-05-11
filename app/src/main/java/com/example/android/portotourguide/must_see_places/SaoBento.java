@@ -3,7 +3,9 @@ package com.example.android.portotourguide.must_see_places;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.example.android.portotourguide.R;
@@ -17,6 +19,9 @@ public class SaoBento extends AppCompatActivity {
 
         // Set the content of the activity to use the sao_bento.xml layout file
         setContentView(R.layout.sao_bento);
+        if (getActionBar() != null) {
+            getActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         TextView textView = findViewById(R.id.tower_clericos_des);
 
@@ -25,4 +30,16 @@ public class SaoBento extends AppCompatActivity {
                 "fonts/CrimsonText-Regular.ttf");
         textView.setTypeface(font);   // Set the style of the font
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            //Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }

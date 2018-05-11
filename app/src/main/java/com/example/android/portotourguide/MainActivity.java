@@ -1,9 +1,11 @@
 package com.example.android.portotourguide;
 
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import java.util.Locale;
 
@@ -15,6 +17,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
+        if (getActionBar() != null) {
+            getActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
 
         // Find the view pager that will allow the user to swipe between fragments
         ViewPager viewPager = findViewById(R.id.viewpager);
@@ -36,5 +42,16 @@ public class MainActivity extends AppCompatActivity {
         *   by calling onPageTitle()
         */
         tabLayout.setupWithViewPager(viewPager);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            //Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
