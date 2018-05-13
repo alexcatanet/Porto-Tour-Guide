@@ -1,4 +1,4 @@
-language: android
+language: java
 android:
   components:
     - build-tools-3.1.2
