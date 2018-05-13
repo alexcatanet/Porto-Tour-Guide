@@ -1,11 +1,8 @@
 language: android
 android:
   components:
-    - build-tools-26.0.2
+    - build-tools-3.1.2
     - android-27
-    - sys-img-armeabi-v7a-android-tv-l
-    - add-on
-    - extra
 
     # The BuildTools version used by your project
     - build-tools-26.0.2
@@ -28,15 +25,3 @@ android:
     - 'android-sdk-preview-license-52d11cd2'
     - 'android-sdk-license-.+'
     - 'google-gdk-license-.+'
-    
-    before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
-cache:
-  directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
-    - $HOME/.android/build-cache
-   
- script:
-   - ./gradlew build
