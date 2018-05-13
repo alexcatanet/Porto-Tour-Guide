@@ -1,9 +1,5 @@
 
 language: android
-jdk: oraclejdk8
-sudo: false
-
-
 env:
  global:
  - ANDROID_API_LEVEL=27
@@ -30,6 +26,13 @@ android:
   - android-sdk-preview-license-.+
   - android-sdk-license-.+
   - google-gdk-license-.+
+  
+  sudo: required
+
+jdk:
+  - oraclejdk8
+
+install: true
 
 cache:
   directories:
@@ -37,15 +40,21 @@ cache:
   - "$HOME/.gradle/wrapper/"
   - "$HOME/.android/build-cache"
   
- script:
-  - android list targets
-  - echo no | android create avd --force -n test -t "android-"$ANDROID_EMULATOR_LEVEL --abi $ANDROID_ABI --tag $ANDROID_TAG
-  - emulator -avd test -no-window &
-  - ./gradlew dependencyCheckAnalyze assembleDebugAndroidTest -PdisablePreDex --continue --stacktrace
-  - android-wait-for-emulator
-#  - adb shell input keyevent 82 &
-  - ./gradlew connectedDebugAndroidTest -PdisablePreDex --continue --stacktrace
+script:
+  - sudo apt-get update && sudo apt-get install oracle-java8-installer
+  - java -version
   
-  after_failure:
-  - cat $TRAVIS_BUILD_DIR/app/gen_build/reports/lint-results.xml
-
+  before_script:
+  - chmod +x gradlew
+  
+  script:
+  - ./gradlew assembleDebug --stacktrace
+  
+  deploy:
+  provider: releases
+  api-key: $GITHUB_APIKEY
+  file: "app/build/outputs/apk/app-debug.apk"
+  skip_cleanup: true
+  on:
+    tags: true
+    all_branches: true
