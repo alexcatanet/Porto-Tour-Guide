@@ -1,8 +1,8 @@
 [![Build Status](https://travis-ci.org/alexcatanet/Porto-Tour-Guide.svg?branch=master)](https://travis-ci.org/alexcatanet/Porto-Tour-Guide)
 # Porto Tour Guide
 
-This project was developed within the internship program (Android Basics By Google Nanodegree).
-The goal was to make a multi-screen Android app in order to share the knowledge about one concrete city you are familiar with, also presenting relevant information to a user who's visiting your city. The app can list top attractions, restaurants, public places, or events for the city. 
+This project was developed within the scholarship program (Android Basics By Google).
+The goal was to make a multi-screen Android app in order to share the knowledge about one specific city you are familiar with, also presenting relevant information to a user who's visiting your city. The app list top attractions, restaurants and public places for the city. 
 
 ## What I've learned:
 This project is about combining various ideas and skills I've been practicing throughout the course. They include features like:
